@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=YourFontFamily:wght@400;700&display=swap');
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+body {
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  font-family: 'YourFontFamily', sans-serif;
+}
+
+
+
+/*header congig*/
+
+  .glowing-border {
+    border-top: 4px solid transparent;
+    background-image: linear-gradient(to right, #000, #000), linear-gradient(to right, #ff00ff, #00ffff);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.5);
+  }
+  
+  .nav-item {
+    color: white;
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-item:hover {
+    color: #00ffff; /* Neon color for hover effect */
+  }
+  
+  .nav-item:focus {
+    outline: none;
+  }
+  
+  .relative .nav-item {
+    display: inline-block;
+  }
+  
+
+/*header congig end*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*trial  hero and moving div*/
+
+
+.moving-container {
+  @apply fixed bottom-0 left-1/2 transform -translate-x-1/2 w-4/5 bg-black overflow-hidden whitespace-nowrap z-10 py-4;
+}
+
+.fade-left,
+.fade-right {
+  @apply absolute top-0 w-1/6 h-full z-20 pointer-events-none;
+}
+
+.fade-left {
+  background: linear-gradient(to right, black, transparent);
+}
+
+.fade-right {
+  background: linear-gradient(to left, black, transparent);
+}
+
+.marquee {
+  @apply flex;
+  animation: scroll 20s linear infinite;
+}
+
+.track {
+  @apply flex flex-shrink-0;
+}
+
+.track img {
+  @apply h-8 mx-5;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+
+/*here move end */
+
+
