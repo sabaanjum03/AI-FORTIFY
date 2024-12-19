@@ -64,7 +64,7 @@ const Header = () => {
     <header className="fixed top-0 left-0 w-full bg-black bg-opacity-40 backdrop-blur-lg text-white flex items-center px-8 md:px-16 justify-between py-4 z-50 shadow-lg">
       <div className="flex items-center">
         <img src="https://lazarev.kiev.ua/la24/webby.svg" alt="Logo" className="h-10 mr-6" />
-        <span className="font-bold text-2xl tracking-widest uppercase">Kiyoshi</span>
+        <span className="font-bold text-2xl tracking-widest uppercase">AI Fortify</span>
       </div>
       <nav className="flex space-x-16">
         <Link to="/" className="relative group text-lg md:text-xl font-medium">
